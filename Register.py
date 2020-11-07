@@ -22,8 +22,8 @@ def register():
 
     def Save(name, age, email):
         conn = psycopg2.connect(dbname='postgres',
-                                user="postgres",
-                                password="avq891@#",
+                                user="",
+                                password="",
                                 host="localhost",
                                 port="5432"
                                 )
