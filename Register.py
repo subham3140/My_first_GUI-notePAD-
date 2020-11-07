@@ -45,8 +45,8 @@ def register():
 
     # def Display_All_Users():
     #     conn = psycopg2.connect(dbname='postgres',
-    #                             user="postgres",
-    #                             password="avq891@#",
+    #                             user="",
+    #                             password="",
     #                             host="localhost",
     #                             port="5432"
     #                             )
@@ -114,8 +114,8 @@ def register():
 
     def Search1(name):
         conn = psycopg2.connect(dbname='postgres',
-                                user="postgres",
-                                password="avq891@#",
+                                user="",
+                                password="",
                                 host="localhost",
                                 port="5432"
                                 )
@@ -130,8 +130,8 @@ def register():
 
     def Search2(id):
         conn = psycopg2.connect(dbname='postgres',
-                                user="postgres",
-                                password="avq891@#",
+                                user="",
+                                password="",
                                 host="localhost",
                                 port="5432"
                                 )
