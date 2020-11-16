@@ -10,13 +10,6 @@ def register():
     window.geometry("800x800+300+10")
     window.config(bg="#423c3c")
 
-    # # img = Image.open('My_pic.jpg')
-    # img = Image.open('C:\\Users\\shubham kumar\\Pictures\\Saved Pictures\\pic.jpg')
-    # background_image=ImageTk.PhotoImage(img)
-
-    # background_label = Label(window, image=background_image)
-    # background_label.place(x=0, y=0, relwidth=1, relheight=1)
-
     fontStyle = font.Font(family="Times New Roman", size=18)
     fontStyle1 = font.Font(family="Times New Roman", size=13)
 
@@ -42,33 +35,6 @@ def register():
             conn.close()
             Original_Pad.original()
 
-
-    # def Display_All_Users():
-    #     conn = psycopg2.connect(dbname='postgres',
-    #                             user="",
-    #                             password="",
-    #                             host="localhost",
-    #                             port="5432"
-    #                             )
-    #     cursor = conn.cursor()
-    #     query = """SELECT * FROM Users"""
-    #     cursor.execute(query)
-    #     row = cursor.fetchall()
-    #     # Here row contains all the packs of tuple,means number
-    #     # of tuples and each tuple has four items that is column
-    #     #          Means
-    #     # You retrieved a list of rows, and each row is a tuple
-    #     # of columns.As each row contains four column the rows are tuples with four value each.
-    #
-    #     listbox =Listbox(frame,width=35,height=5)
-    #     listbox.grid(row=5,column=1,columnspan=4,sticky="w",pady=15)
-    #
-    #     for x in row:
-    #         listbox.insert(END,x[1])
-    #
-    #     conn.commit()
-    #     conn.close()
-
     def Display_Searched_name(row1):
         row1 = row1
         listbox1 = Listbox(frame, width=50, fg="#edd5d5", height=5, bg="#423c3c")
@@ -78,12 +44,7 @@ def register():
 
         try:
             details = {'Id': row1[0], 'name': row1[1], 'age': row1[2], 'email': row1[3]}
-            # //////////////using .forma()//////////////////////////////////////
-            # listbox1.insert(END,"Id number : {} ".format(details['Id']),
-            #                 "Name : {} ".format(details['name']),
-            #                 "Age : {} ".format(details['age']),
-            #                 "Email : {} ".format(details['email']))
-            # //////////////// using f"{}"/////////////////////////////////////////
+        
             listbox1.insert(END, f"Id number : {details['Id']}",
                             f"Name : {details['name']}",
                             f"Age : {details['age']}",
@@ -106,11 +67,6 @@ def register():
                         "Name : {} ".format(details['name']),
                         "Age : {} ".format(details['age']),
                         "Email : {} ".format(details['email']))
-        # //////////////// using f"{}"/////////////////////////////////////////
-        # listbox2.insert(END, f"Id number : {details['Id']}",
-        #                 f"Name : {details['name']}",
-        #                 f"Age : {details['age']}",
-        #                 f"Email : {details['email']}")
 
     def Search1(name):
         conn = psycopg2.connect(dbname='postgres',
