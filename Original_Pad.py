@@ -16,11 +16,7 @@ def original():
 
     def Save_File():
         save_me = text_field.get("1.0",END)
-        # text_field1 = scrolledtext.ScrolledText(master2, fg="black", font=fontStyle, bg="white", width=50, height=22,
-        #                                        wrap=WORD, highlightthickness=4, highlightbackground="#f26666")
-        # text_field1.pack(fill=BOTH)
-        # text_field1.place(x=10, y=80)
-
+  
         with open("default.txt","w",encoding="utf-8") as write_on_me:
             write_on_me.write(save_me)
 
@@ -67,10 +63,6 @@ def original():
     filename4.add_separator()
     filename4.add_cascade(label="About")
 
-
-    # Head = Frame(master2,width=785,height=70,bg="#423c3c",highlightthickness=2,highlightbackground="#f26666")
-    # Head.pack()
-    # Head.place(y=10,x=10)
 
     text_field = scrolledtext.ScrolledText(master2,font=fontStyle,fg="black",bg="white",width=66,height=30,wrap=WORD,highlightthickness=4,highlightbackground="#f26666")
     text_field.pack(fill=BOTH,expand=True)
