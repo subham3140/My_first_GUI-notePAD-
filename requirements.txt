@@ -1,1 +1,2 @@
-/////////the only use is to get Python Tkinter Library.(Enough)////////
+python==3.0.1
+tkinter==3.9.2
